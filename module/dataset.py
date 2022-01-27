@@ -457,15 +457,7 @@ def write_results_accuracy(metric_list, model_conifg_dict, csv_writer):
 
     idx_repeat = model_conifg_dict['idx_repeat']
 
-    optimizer = model_conifg_dict['optimizer']
-    loss = model_conifg_dict['loss']
-    epoch = model_conifg_dict['epoch']
-    batch_size = model_conifg_dict['batch_size']
-    learning_rate = model_conifg_dict['learning_rate']
-        
-    csv_writer.writerow({'optimizer': optimizer, 'loss': loss,
-                        'epoch': epoch, 'batch_size': batch_size, 'learning_rate': learning_rate,
-                        'idx_repeat': idx_repeat, 'Loss': test_loss, 'Accuracy': test_accuracy})
+    csv_writer.writerow({'idx_repeat': idx_repeat, 'Loss': test_loss, 'Accuracy': test_accuracy})
 
 
 ###################################################################################################################
