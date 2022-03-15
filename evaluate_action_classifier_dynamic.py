@@ -13,6 +13,7 @@ from sklearn.metrics import f1_score as skl_f1_score
 from sklearn.metrics import precision_score as skl_precision
 from sklearn.metrics import recall_score as skl_recall
 from sklearn.metrics import confusion_matrix as skl_confusion_matrix
+from sklearn.metrics import multilabel_confusion_matrix as mcm
 from sklearn.metrics import classification_report
 from sklearn.metrics import average_precision_score as AP
 
@@ -125,7 +126,7 @@ def check_mAP(dataset_dict, load_model_path, model_config_dict):
     print('sklearn.metrics.classification_report : \n', classification_report(y_test_max, y_pred_max), '\n')
     print('sklearn.metrics.average_precision_score : mAP : \n', AP(y_test, y_pred), '\n')
     print('sklearn.metrics.average_precision_score : each score : \n', AP(y_test, y_pred, average = None), '\n')
-    
+
 
 ###################################################################################################################
 # end
